@@ -1,4 +1,4 @@
-package za.co.virtualpostman.vp.server.plugins.custom.day.one.part.one;
+package za.co.virtualpostman.vp.server.plugins.custom.day.one.part.two;
 
 import java.io.IOException;
 import java.util.List;
@@ -11,7 +11,7 @@ public class Driver {
         try {
             inputs = Utils.getInputDataList("day-one-input.csv");
         } catch (IOException ex) {
-            throw new RuntimeException("Error getting file", ex);
+            throw new RuntimeException("Error finding file", ex);
         }
 
         int product = getProduct(inputs);
@@ -24,14 +24,17 @@ public class Driver {
             int entry = inputs.get(i);
             for (int j = i + 1; j < inputs.size() - 1; j++) {
                 int nextEntry = inputs.get(j);
-                int sum = entry + nextEntry;
-                if (sum == 2020) {
-                    product = entry * nextEntry;
-                    break;
+                for (int k = j + 1; k < inputs.size() - 1; k++) {
+                    int dNextEntry = inputs.get(k);
+                    int sum = entry + nextEntry + dNextEntry;
+                    if (sum == 2020) {
+                        product = entry * nextEntry * dNextEntry;
+                        break;
+                    }
                 }
+
             }
         }
         return product;
     }
-
 }
