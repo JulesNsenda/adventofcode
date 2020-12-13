@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>za.co.virtualpostman.vp.server.plugins.custom</groupId>
     <artifactId>day-one</artifactId>
-    <version>7.8.8-SNAPSHOT</version>
+    <version>0.1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
