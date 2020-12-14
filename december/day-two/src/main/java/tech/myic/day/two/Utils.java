@@ -20,7 +20,7 @@ public class Utils {
                 String line;
                 while ((line = bufferedReader.readLine()) != null) {
                     String[] parts = line.replaceAll("\"", "").split(",");
-                    lines.add(new PasswordDetails(parts[0], parts[1].replaceAll(":", ""), parts[2]));
+                    lines.add(new PasswordDetails(parts[0].trim(), parts[1].trim().replaceAll(":", ""), parts[2].trim()));
                 }
             }
         }
