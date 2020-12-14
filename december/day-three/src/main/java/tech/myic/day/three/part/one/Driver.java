@@ -9,7 +9,7 @@ public class Driver {
 
     public static void main(String[] args) {
         try {
-            List<String> inputsData = Utils.getInputDataList("day-three-test.txt");
+            List<String> inputsData = Utils.getInputDataList("day-three-inputs.txt");
             int numberOfTrees = getNumberOfTrees(inputsData);
             System.out.println("Number of trees: " + numberOfTrees);
         } catch (IOException ex) {
@@ -31,7 +31,7 @@ public class Driver {
         }
 
         int numberofTrees = 0;
-        int position = 1;
+        int position = 0;
         for (String newInput : newInputs) {
             char[] lineChars = newInput.toCharArray();
             for (int i = position; i <= lineChars.length; i++) {
@@ -44,10 +44,8 @@ public class Driver {
                     break;
                 }
             }
-            position += 1;
         }
         return numberofTrees;
     }
 
-  
 }
