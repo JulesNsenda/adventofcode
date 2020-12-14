@@ -31,7 +31,6 @@ public class Driver {
                     valid += 1;
                 }
             }
-
             System.out.println(valid);
         } catch (IOException ex) {
             throw new RuntimeException("Error processing", ex);
